@@ -17,7 +17,7 @@ class Replay
 
 		Tempfile.open Digest::SHA1.hexdigest( 'commands-' + commands ) do |file|
 			@commands_file = file.path
-			file.write commands
+			file.write commands + ":wq\r\n"
 		end
 	end
 

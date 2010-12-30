@@ -3,6 +3,9 @@ require 'rubygems'
 require 'sinatra'
 require 'replay'
 
+Dir.chdir( '/var/chroot/' )
+Dir.chroot( '/var/chroot/' )
+
 post '/' do
 	input = params[ :input ]
 	output = params[ :output ]

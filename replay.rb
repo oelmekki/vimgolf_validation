@@ -22,7 +22,7 @@ class Replay
 	end
 
 	def validates
-		system("vim -n --noplugin -i NONE +0 -s #{@commands_file} #{@input_file}")
+		system("vi -n --noplugin -i NONE +0 -s #{@commands_file} #{@input_file}")
 		@valid = false
 
 		if $?.exitstatus.zero?
